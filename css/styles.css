@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #222831;
+  color: #dddddd;
+}
+
+nav {
+  align-items: center;
+  background-color: #dddddd;
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+
+nav > img {
+  margin-left: 10px;
+  width: 100px;
+  height: auto;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.download {
+  background: #222831;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  color: #dddddd;
+  height: 50px;
+  position: relative;
+  width: 180px;
+}
+
+.download > .fab {
+  /* color: #dddddd; */
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.df, .dfn {
+  left: 70px;
+  position: absolute;
+}
+
+.df {
+  font-size: .68rem;
+  top: 8px;
+}
+
+.dfn {
+  font-size: 1.08rem;
+  top: 21px;
+}
+
+.download:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+#main-container {
+  height: 100vh;
+  display: block;
+  /* position: relative; */
+}
+
+#main-container::after {
+  content: "";
+  background-image: url("../images/pexels-rodrigo-santos-3888149.jpg");
+  background-color: #222831;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 50vw;
+  height: 50vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* color: #dddddd; */
+}
+
+div > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 65%;
+  width: 35%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+
+  display: flex;
+  justify-content: center;
+}
+
+div > img {
+  height: 100%;
+  max-height: 50vh;
+  width: auto;
+  border-radius: 20px;
+}
+
+button {
+  background-color: #dddddd;
+  border: none;
+  color: #30475e;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222831;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 65%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
