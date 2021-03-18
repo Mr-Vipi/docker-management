@@ -1,3 +1,11 @@
+/*****************************************************************************
+  TABLE OF CONTENT
+
+  1. SPLASH SCREEN
+  2. FEATURES
+  3. F.A.Q
+******************************************************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,77 +14,53 @@
 body {
   background-color: #222831;
   color: #dddddd;
+  font-family: 'Rubik', sans-serif;
 }
 
 nav {
   align-items: center;
   background-color: #dddddd;
   display: flex;
-  font-family: 'Roboto Condensed', sans-serif;
   justify-content: space-between;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
+  z-index: 1000;
 }
 
-nav > img {
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
   margin-left: 10px;
   width: 100px;
   height: auto;
+  padding-right: 10px;
+  border-radius: 15px;
 }
 
-li {
+.logo > h1 {
+  color: #222831;
+  display: inline-block;
+}
+
+nav > ul > li {
   display: inline-block;
   margin-right: 10px;
-}
-
-.download {
-  background: #222831;
-  border: 1px solid #dddddd;
-  border-radius: 5px;
-  color: #dddddd;
-  height: 50px;
-  position: relative;
-  width: 180px;
-}
-
-.download > .fab {
-  /* color: #dddddd; */
-  left: 15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.df, .dfn {
-  left: 70px;
-  position: absolute;
-}
-
-.df {
-  font-size: .68rem;
-  top: 8px;
-}
-
-.dfn {
-  font-size: 1.08rem;
-  top: 21px;
-}
-
-.download:hover {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
 }
 
 #main-container {
   height: 100vh;
   display: block;
-  /* position: relative; */
+  position: relative;
 }
 
 #main-container::after {
   content: "";
   background-image: url("../images/pexels-rodrigo-santos-3888149.jpg");
   background-color: #222831;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,19 +74,22 @@ li {
   z-index: -1;
 }
 
+/*****************************************************************************/
+/*************************** 1. SPLASH SCREEN ********************************/
+/*****************************************************************************/
+
 .introduction {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 .slider-container {
   position: relative;
   overflow: hidden;
   width: 50vw;
-  height: 50vh;
+  height: 75vh;
 }
 
 .left-slide {
@@ -124,15 +111,17 @@ li {
   /* color: #dddddd; */
 }
 
-div > ul {
-  display: flex;
-  flex-direction: column;
+.left-slide h2 {
+  width: 100%;
+  font-size: 2.5rem; /* 40/16 */
+  margin-bottom: 30px;
+  margin-top: -30px;
 }
 
-.left-slide h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  margin-top: -30px;
+.left-slide ul{
+  list-style-type: circle;
+  line-height: 1.5;
+  padding-left: 20px;
 }
 
 .right-slide {
@@ -145,14 +134,13 @@ div > ul {
 }
 
 .right-slide > div {
-
   display: flex;
   justify-content: center;
 }
 
-div > img {
+.right-slide > div > img {
   height: 100%;
-  max-height: 50vh;
+  max-height: 75vh;
   width: auto;
   border-radius: 20px;
 }
@@ -164,14 +152,12 @@ button {
   cursor: pointer;
   font-size: 16px;
   padding: 15px;
+  opacity: 0.5
 }
 
 button:hover {
   color: #222831;
-}
-
-button:focus {
-  outline: none;
+  opacity: 1;
 }
 
 .slider-container .action-buttons button {
@@ -191,4 +177,176 @@ button:focus {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+/*****************************************************************************/
+/******************************* 2. FEATURES *********************************/
+/*****************************************************************************/
+
+#features {
+  height: 100vh;
+  background-image: linear-gradient(180deg, #222831 0%, #30475e 100%);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.features-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 45vh;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.feature-tile {
+  width: 25%;
+  text-align: center;
+  margin-top: 100px;
+  margin: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.feature-tile i {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.feature-tile h3 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.download-boxes {
+  padding: 50px 20px;
+}
+
+.download {
+  background: #dddddd;
+  border: 1px solid #222831;
+  border-radius: 5px;
+  color: #222831;
+  height: 65px;
+  position: relative;
+  width: 200px;
+}
+
+.download > .fab {
+  /* color: #222831; */
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.df, .dfn {
+  left: 70px;
+  position: absolute;
+}
+
+.df {
+  font-size: .9rem;
+  top: 13px;
+}
+
+.dfn {
+  font-size: 1.3rem;
+  top: 26px;
+}
+
+.download:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+/*****************************************************************************/
+/********************************* 3. F.A.Q **********************************/
+/*****************************************************************************/
+
+#faq-section {
+  height: 100vh;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #30475e;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa488;
 }

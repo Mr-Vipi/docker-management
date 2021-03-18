@@ -1,3 +1,7 @@
+/*****************************************************************************/
+/******************************* SPLASH SCREEN *******************************/
+/*****************************************************************************/
+
 const sliderContainer = document.querySelector('.slide-container'),
   slideRight = document.querySelector('.right-slide'),
   slideLeft = document.querySelector('.left-slide'),
@@ -7,7 +11,7 @@ const sliderContainer = document.querySelector('.slide-container'),
 
 let activeSlideIndex = 0;
 
-slideLeft.style.top = `-${(slidesLength - 1) * 50}vh`;
+slideLeft.style.top = `-${(slidesLength - 1) * 75}vh`;
 
 upButton.addEventListener('click', () => changeSlide('up'));
 downButton.addEventListener('click', () => changeSlide('down'));
@@ -32,6 +36,18 @@ const changeSlide = (direction) => {
   // slideLeft.style.transform = `translateY(${
   //   activeSlideIndex * sliderHeight
   // }px)`;
-  slideRight.style.transform = `translateY(-${activeSlideIndex * 50}vh)`;
-  slideLeft.style.transform = `translateY(${activeSlideIndex * 50}vh)`;
+  slideRight.style.transform = `translateY(-${activeSlideIndex * 75}vh)`;
+  slideLeft.style.transform = `translateY(${activeSlideIndex * 75}vh)`;
 };
+
+/*****************************************************************************/
+/********************************** F.A.Q ************************************/
+/*****************************************************************************/
+
+const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+    toggle.parentNode.classList.toggle('active');
+  });
+});
