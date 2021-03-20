@@ -5,67 +5,26 @@
   2. FEATURES
   3. F.A.Q
 ******************************************************************************/
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: #222831;
-  color: #dddddd;
-  font-family: 'Rubik', sans-serif;
-}
-
-nav {
-  align-items: center;
   background-color: #dddddd;
-  display: flex;
-  justify-content: space-between;
-  /* position: fixed; */
-  width: 100%;
-  z-index: 1000;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo > img {
-  margin-left: 10px;
-  width: 100px;
-  height: auto;
-  padding-right: 10px;
-  border-radius: 15px;
-}
-
-.logo > h1 {
   color: #222831;
-  display: inline-block;
-}
-
-nav > ul > li {
-  display: inline-block;
-  margin-right: 10px;
+  font-family: 'Rubik', sans-serif;
 }
 
 #main-container {
   height: 100vh;
-  display: block;
-  position: relative;
 }
 
 #main-container::after {
   content: "";
   background-image: url("../images/pexels-rodrigo-santos-3888149.jpg");
-  background-color: #222831;
+  background-color: #dddddd;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  opacity: 0.2;
+  background-blend-mode: screen;
+  /* opacity: 0.4; */
   top: 0;
   left: 0;
   bottom: 0;
@@ -74,22 +33,26 @@ nav > ul > li {
   z-index: -1;
 }
 
+.navbar {
+  background-image: linear-gradient(180deg, rgba(34, 40, 49, 1) 0%, rgba(34, 40, 49, 0) 100%);
+}
+
+.navbar-dark .navbar-brand {
+  color: #D7DED3;
+}
+
+.navbar-dark .navbar-brand:hover {
+  color: #D7DED3;
+}
+
 /*****************************************************************************/
 /*************************** 1. SPLASH SCREEN ********************************/
 /*****************************************************************************/
-
-.introduction {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .slider-container {
   position: relative;
   overflow: hidden;
   width: 50vw;
-  height: 75vh;
+  height: 90vh;
 }
 
 .left-slide {
@@ -101,27 +64,22 @@ nav > ul > li {
   transition: transform 0.5s ease-in-out;
 }
 
-.left-slide > div {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  /* color: #dddddd; */
+.left-slide>div {
+  /* height: 100%;
+  width: 100%; */
 }
 
-.left-slide h2 {
+/* .left-slide h2 {
   width: 100%;
-  font-size: 2.5rem; /* 40/16 */
   margin-bottom: 30px;
   margin-top: -30px;
-}
+  text-align: left;
+} */
 
-.left-slide ul{
+.left-slide ul {
   list-style-type: circle;
-  line-height: 1.5;
-  padding-left: 20px;
+  /* line-height: 1.5;
+  padding-left: 20px; */
 }
 
 .right-slide {
@@ -133,31 +91,34 @@ nav > ul > li {
   transition: transform 0.5s ease-in-out;
 }
 
-.right-slide > div {
-  display: flex;
-  justify-content: center;
+.right-slide>div {
+  /* height: 100%;
+  width: 100%; */
+  /* display: flex;
+  justify-content: center; */
 }
 
-.right-slide > div > img {
-  height: 100%;
-  max-height: 75vh;
-  width: auto;
+.right-slide>div>img {
   border-radius: 20px;
+  /* object-fit: contain; */
+  /* width: auto;
+  height: auto; */
 }
 
-button {
-  background-color: #dddddd;
+.down-button, .up-button {
+  background-color: #30475e;
   border: none;
-  color: #30475e;
+  color: #dddddd;
   cursor: pointer;
-  font-size: 16px;
+  /* font-size: 16px; */
   padding: 15px;
   opacity: 0.5
 }
 
-button:hover {
-  color: #222831;
+.down-button:hover, .up-button:hover {
+  background-color: #30475e;
   opacity: 1;
+  transition: opacity 0.75s ease-in-out;
 }
 
 .slider-container .action-buttons button {
@@ -182,69 +143,31 @@ button:hover {
 /*****************************************************************************/
 /******************************* 2. FEATURES *********************************/
 /*****************************************************************************/
-
-#features {
+#download {
   height: 100vh;
-  background-image: linear-gradient(180deg, #222831 0%, #30475e 100%);
-}
-
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-}
-
-.features-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 45vh;
-  margin-bottom: 100px;
-  margin-top: 50px;
-}
-
-.feature-tile {
-  width: 25%;
-  text-align: center;
-  margin-top: 100px;
-  margin: 20px;
-  border: 1px solid #dddddd;
-  border-radius: 20px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.feature-tile i {
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-
-.feature-tile h3 {
-  padding-left: 20px;
-  padding-right: 20px;
+  /* background-image: linear-gradient(180deg, #222831 0%, #30475e 100%); */
 }
 
 .download-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
+  max-width: 600px;
+  margin: auto;
 }
 
-.download-boxes {
-  padding: 50px 20px;
+#download h2 {
+  text-align: center;
 }
 
 .download {
-  background: #dddddd;
-  border: 1px solid #222831;
+  background: #30475e;
+  border: 1px solid #dddddd;
   border-radius: 5px;
-  color: #222831;
+  color: #dddddd;
   height: 65px;
   position: relative;
   width: 200px;
 }
 
-.download > .fab {
-  /* color: #222831; */
+.download>.fab {
   left: 15px;
   position: absolute;
   top: 50%;
@@ -271,22 +194,32 @@ h2 {
   filter: invert(100%);
 }
 
+
+
+/* .gallery-container .container {
+  max-width: 600px;
+} */
+
 /*****************************************************************************/
 /********************************* 3. F.A.Q **********************************/
 /*****************************************************************************/
-
 #faq-section {
   height: 100vh;
+  /* background-image: linear-gradient(180deg, #30475e 0%, #222831 100%); */
 }
 
 .faq-container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
+}
+
+.faq-container h2 {
+  text-align: center;
 }
 
 .faq {
   background-color: transparent;
-  border: 1px solid #9fa4a8;
+  border: 1px solid #222831;
   border-radius: 10px;
   margin: 20px 0;
   padding: 30px;
@@ -296,8 +229,8 @@ h2 {
 }
 
 .faq.active {
-  background-color: #30475e;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  /* background-color: #dddddd; */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .faq-title {
@@ -307,6 +240,7 @@ h2 {
 .faq-text {
   display: none;
   margin: 30px 0 0;
+  line-height: 1.5;
 }
 
 .faq.active .faq-text {
@@ -321,7 +255,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  /* font-size: 1rem; */
   padding: 0;
   position: absolute;
   top: 30px;
@@ -330,8 +264,8 @@ h2 {
   width: 30px;
 }
 
-.faq-toggle:focus {
-  outline: 0;
+.fa-chevron-down {
+  color: #222831;
 }
 
 .faq-toggle .fa-times {
@@ -339,7 +273,7 @@ h2 {
 }
 
 .faq.active .faq-toggle .fa-times {
-  color: #fff;
+  color: #222831;
   display: block;
 }
 
@@ -348,5 +282,15 @@ h2 {
 }
 
 .faq.active .faq-toggle {
-  background-color: #9fa488;
+  background-color: #dddddd;
+}
+
+code {
+  display: inline-block;
+  padding: 2px;
+  white-space: pre-line;
+  background-color: #30475e;
+  color: #dddddd;
+  border-radius: 5px;
+  /* font-size: 1rem; */
 }

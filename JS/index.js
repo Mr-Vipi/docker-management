@@ -11,7 +11,7 @@ const sliderContainer = document.querySelector('.slide-container'),
 
 let activeSlideIndex = 0;
 
-slideLeft.style.top = `-${(slidesLength - 1) * 75}vh`;
+slideLeft.style.top = `-${(slidesLength - 1) * 90}vh`;
 
 upButton.addEventListener('click', () => changeSlide('up'));
 downButton.addEventListener('click', () => changeSlide('down'));
@@ -36,9 +36,15 @@ const changeSlide = (direction) => {
   // slideLeft.style.transform = `translateY(${
   //   activeSlideIndex * sliderHeight
   // }px)`;
-  slideRight.style.transform = `translateY(-${activeSlideIndex * 75}vh)`;
-  slideLeft.style.transform = `translateY(${activeSlideIndex * 75}vh)`;
+  slideRight.style.transform = `translateY(-${activeSlideIndex * 90}vh)`;
+  slideLeft.style.transform = `translateY(${activeSlideIndex * 90}vh)`;
 };
+
+/*****************************************************************************/
+/******************************** Gallery ************************************/
+/*****************************************************************************/
+
+
 
 /*****************************************************************************/
 /********************************** F.A.Q ************************************/

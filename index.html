@@ -7,35 +7,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
-  <title></title>
+  <title>Docker Management</title>
 </head>
 
 <body>
   <main>
     <section id="main-container">
       <header>
-        <nav>
-          <div class="logo">
-            <img src="images/unnamed.webp" alt="Logo Image">
-            <h1>Docker Management</h1>
+        <nav class="navbar navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="images/unnamed.webp" alt="Logo Image" width="50" height="50" class="rounded">
+              <span class="mx-3">Docker Management</span>
+            </a>
           </div>
-          <ul>
-            <li>
-              <!-- Nav Link -->
-            </li>
-            <li>
-              <!-- Nav Link -->
-            </li>
-          </ul>
         </nav>
       </header>
 
-      <div class="introduction">
+      <div class="container d-flex justify-content-center">
         <div class="slider-container">
           <div class="left-slide">
-            <div>
-              <h2>manage your docker</h2>
+            <div class="manage w-100 h-100 d-flex flex-column justify-content-center">
+              <h2>Manage your docker</h2>
               <ul>
                 <li>list containers</li>
                 <li>create containers</li>
@@ -49,7 +44,7 @@
               </ul>
             </div>
 
-            <div>
+            <div class="connect w-100 h-100 d-flex flex-column justify-content-center">
               <h2>Connect via ssh to your Linux server</h2>
               <ul>
                 <li>connect to multiple servers</li>
@@ -58,14 +53,28 @@
                 <li>view logs of containers</li>
               </ul>
             </div>
+
+            <div class="privacy w-100 h-100 d-flex flex-column justify-content-center">
+              <h2>Privacy in your hand</h2>
+              <ul>
+                <li>credentials are encrypted</li>
+                <li>server info is stored on phone only</li>
+                <li>data is wiped out once the app is removed</li>
+              </ul>
+            </div>
           </div>
+
           <div class="right-slide">
-            <div class="manage">
-              <img src="images\unnamed (1).webp" alt="">
+            <div class="privacy w-100 h-100 d-flex flex-column justify-content-center">
+              <img src="images\unnamed (1).webp" alt="" width="361" height="722" class="img-fluid">
             </div>
 
-            <div class="connect">
-              <img src="images\unnamed (2).webp" alt="">
+            <div class="connect w-100 h-100 d-flex flex-column justify-content-center">
+              <img src="images\unnamed (2).webp" alt="" width="361" height="722" class="img-fluid">
+            </div>
+
+            <div class="manage w-100 h-100 d-flex flex-column justify-content-center">
+              <img src="images\unnamed (3).webp" alt="" width="361" height="722" class="img-fluid">
             </div>
           </div>
 
@@ -81,91 +90,97 @@
       </div>
     </section>
 
-    <section id="features">
-      <h2>Features</h2>
-      <div class="features-box">
-        <div class="feature-tile">
-          <i class="fas fa-lock fa-5x"></i>
-          <h3>credentials are encrypted</h3>
+    <section id="download">
+      <div class="container">
+        <div class="download-container">
+          <h2 class="display-3">Download</h2>
+          <div class="d-flex justify-content-evenly">
+            <a href="#">
+              <div class="download android">
+                <i class="fab fa-google-play fa-3x"></i>
+                <span class="df">Download from</span>
+                <span class="dfn">Google Play</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="download apple">
+                <i class="fab fa-apple fa-3x"></i>
+                <span class="df">Download from</span>
+                <span class="dfn">App Store</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="feature-tile">
-          <i class="fas fa-user-secret fa-5x"></i>
-          <h3>server info is stored on phone only (the data is wiped out once the app is removed)</h3>
-        </div>
-      </div>
-      <h2>Download</h2>
-      <div class="download-container">
-        <div class="download-boxes">
-          <a href="#">
-            <div class="download android">
-              <i class="fab fa-google-play fa-3x"></i>
-              <span class="df">Download from</span>
-              <span class="dfn">Google Play</span>
-            </div>
-          </a>
-        </div>
-        <div class="download-boxes">
-          <a href="#">
-            <div class="download apple">
-              <i class="fab fa-apple fa-3x"></i>
-              <span class="df">Download from</span>
-              <span class="dfn">App Store</span>
-            </div>
-          </a>
+
+
+        <div class="gallery-container">
+          <h2 class="display-4">Screenshots</h2>
+
+
+
+
+
         </div>
       </div>
     </section>
 
     <section id="faq-section">
-      <h2>F.A.Q</h2>
-      <div class="faq-container">
-        <div class="faq">
-          <h3 class="faq-title">Why I can not connect with non-root users?</h3>
+      <div class="container">
+        <div class="faq-container">
+          <h2 class="display-3">F.A.Q</h2>
+          <div class="faq">
+            <h3 class="faq-title">Why I can not connect with non-root users?</h3>
 
-          <p class="faq-text">The docker commands are executed by the app without <code>sudo</code> so you will need to add your non-root user to the docker group with the following command:
-            <code>sudo usermod -aG docker $USER</code>
-          </p>
+            <p class="faq-text">The docker commands are executed by the app without <code>sudo</code> so you will need to add your non-root user to the docker group with the following command:
+              <code>sudo usermod -aG docker $USER</code>
+            </p>
 
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
 
-        <div class="faq">
-          <h3 class="faq-title">
-            Why I can not connect to Synology server with non-root user?
-          </h3>
+          <div class="faq">
+            <h3 class="faq-title">
+              Why I can not connect to Synology server with non-root user?
+            </h3>
 
-          <p class="faq-text">The non-root user has to be in the docker group and also when ssh-ing to Synology server, the .bashrc profile is not loaded by default so the following command are required:
-            <code>sudo synogroup --add docker $USER
-            sudo chown root:docker /var/run/docker.sock
-            sudo ln -s /volume1/@appstore/Docker/usr/bin/docker /usr/bin/docker</code>
-            NOTE: <code>/volume1/@appstore/Docker/usr/bin/docker</code> might be different for your case.</p>
+            <p class="faq-text">The non-root user has to be in the docker group and also when ssh-ing to Synology server, the .bashrc profile is not loaded by default so the following command are required:
+              <code>sudo synogroup --add docker $USER
+                sudo chown root:docker /var/run/docker.sock
+                sudo ln -s /volume1/@appstore/Docker/usr/bin/docker /usr/bin/docker</code>
+            </p>
+            <p class="faq-text">NOTE: <code>/volume1/@appstore/Docker/usr/bin/docker</code> might be different for your case.</p>
 
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
 
-        <div class="faq">
-          <h3 class="faq-title">
-            Why my ssh key is not working?
-          </h3>
+          <div class="faq">
+            <h3 class="faq-title">
+              Why my ssh key is not working?
+            </h3>
 
-          <p class="faq-text">The ssh agent accepts only RSA format keys so if you are using another format (openssh) please convert it with the following command:
-            <code>ssh-keygen -f -p -m pem -P PASSPHASE -N PASSPHASE</code>
-            NOTE: add "" if there is no passphase for the ssh key</p>
+            <p class="faq-text">The ssh agent accepts only RSA format keys so if you are using another format (openssh) please convert it with the following command:
+              <code>ssh-keygen -f -p -m pem -P PASSPHASE -N PASSPHASE</code>
+            </p>
+            <p class="faq-text">NOTE: add "" if there is no passphase for the ssh key</p>
 
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
         </div>
       </div>
+
+
     </section>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   <script src="js/index.js" charset="utf-8"></script>
 </body>
 
