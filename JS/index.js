@@ -44,7 +44,14 @@ const changeSlide = (direction) => {
 /******************************** Gallery ************************************/
 /*****************************************************************************/
 
-
+const myCarousel = document.querySelector("#myCarousel")
+const primaryCarousel = new bootstrap.Carousel(myCarousel, {
+  interval: false
+});
+const carouselThumbs = document.querySelector("#carousel-thumbs")
+const secondaryCarousel = new bootstrap.Carousel(carouselThumbs, {
+  interval: false
+});
 
 /*****************************************************************************/
 /********************************** F.A.Q ************************************/

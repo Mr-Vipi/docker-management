@@ -2,7 +2,7 @@
   TABLE OF CONTENT
 
   1. SPLASH SCREEN
-  2. FEATURES
+  2. Gallery
   3. F.A.Q
 ******************************************************************************/
 body {
@@ -141,13 +141,8 @@ body {
 }
 
 /*****************************************************************************/
-/******************************* 2. FEATURES *********************************/
+/******************************* 2. Gallery **********************************/
 /*****************************************************************************/
-#download {
-  height: 100vh;
-  /* background-image: linear-gradient(180deg, #222831 0%, #30475e 100%); */
-}
-
 .download-container {
   max-width: 600px;
   margin: auto;
@@ -194,11 +189,75 @@ body {
   filter: invert(100%);
 }
 
+.gallery-container {
+  background-image: url("../images/pexels-brett-sayles-3803517.jpg");
+  background-color: #dddddd;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+}
 
+.gallery-container .container {
+  /* max-width: 600px; */
+  height: 100vh;
+}
 
-/* .gallery-container .container {
-  max-width: 600px;
+.carousel {
+  position: relative;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 70vh;
+  border-radius: 20px;
+}
+
+#carousel-thumbs {
+  background: rgba(255,255,255,.3);
+  bottom: 0;
+  left: 0;
+  padding: 0 50px;
+  right: 0;
+}
+
+#carousel-thumbs img {
+  border: 5px solid transparent;
+  cursor: pointer;
+  height: 20vh;
+}
+
+#carousel-thumbs img:hover {
+  border-color: rgba(255,255,255,.3);
+}
+
+#carousel-thumbs .selected img {
+  border-color: #fff;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+}
+
+@media all and (max-width: 767px) {
+  .carousel-container #carousel-thumbs img {
+    border-width: 3px;
+  }
+}
+
+/* @media all and (min-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    position: absolute;
+  }
 } */
+
+@media all and (max-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    background: #ccccce;
+  }
+}
 
 /*****************************************************************************/
 /********************************* 3. F.A.Q **********************************/
