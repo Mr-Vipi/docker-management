@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" href="images\unnamed.webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,215 +16,190 @@
 <body>
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up fa-2x"></i></button>
   <main>
-    <section id="main-container">
-      <header>
-        <nav class="navbar navbar-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src="images/unnamed.webp" alt="Logo Image" width="50" height="50" class="rounded">
-              <span class="mx-3">Docker Management</span>
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <div class="container d-flex justify-content-center">
-        <div class="slider-container">
-          <div class="left-slide">
-            <div class="manage w-100 h-100 d-flex flex-column justify-content-center">
-              <h2>Manage your docker</h2>
-              <ul>
-                <li>list containers</li>
-                <li>create containers</li>
-                <li>start containers</li>
-                <li>stop containers</li>
-                <li>restart containers</li>
-                <li>remove containers</li>
-                <li>list images</li>
-                <li>build images</li>
-                <li>remove images</li>
-              </ul>
-            </div>
-
-            <div class="connect w-100 h-100 d-flex flex-column justify-content-center">
-              <h2>Connect via ssh to your Linux server</h2>
-              <ul>
-                <li>connect to multiple servers</li>
-                <li>connect through password or rsa key</li>
-                <li>view resource usage of containers</li>
-                <li>view logs of containers</li>
-              </ul>
-            </div>
-
-            <div class="privacy w-100 h-100 d-flex flex-column justify-content-center">
-              <h2>Privacy in your hand</h2>
-              <ul>
-                <li>credentials are encrypted</li>
-                <li>server info is stored on phone only</li>
-                <li>data is wiped out once the app is removed</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="right-slide">
-            <div class="privacy w-100 h-100 d-flex flex-column justify-content-center">
-              <img src="images\unnamed (1).webp" alt="" width="361" height="722" class="img-fluid">
-            </div>
-
-            <div class="connect w-100 h-100 d-flex flex-column justify-content-center">
-              <img src="images\unnamed (2).webp" alt="" width="361" height="722" class="img-fluid">
-            </div>
-
-            <div class="manage w-100 h-100 d-flex flex-column justify-content-center">
-              <img src="images\unnamed (3).webp" alt="" width="361" height="722" class="img-fluid">
-            </div>
-          </div>
-
-          <div class="action-buttons">
-            <button class="down-button">
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <button class="up-button">
-              <i class="fas fa-chevron-up"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="download">
+    <header class="mb-5">
       <div class="container">
-        <div class="download-container py-5">
-          <h2 class="display-3 pb-5">Download</h2>
-          <div class="row">
-            <div class="col d-flex justify-content-center pb-3">
-              <a href="#">
-                <div class="download android">
-                  <i class="fab fa-google-play fa-3x"></i>
-                  <span class="df">Download from</span>
-                  <span class="dfn">Google Play</span>
-                </div>
-              </a>
-            </div>
-            <div class="col d-flex justify-content-center">
-              <a href="#">
-                <div class="download apple">
-                  <i class="fab fa-apple fa-3x"></i>
-                  <span class="df">Download from</span>
-                  <span class="dfn">App Store</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container">
-        <h2 class="display-4 pt-5">Screenshots</h2>
-        <div class="container mt-5">
-          <div class="carousel-container d-flex justify-content-center row">
-
-            <!-- Sorry! Lightbox doesn't work - yet. -->
-
-            <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-slide-number="0">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (1).webp" class="d-block img-fluid" alt="...">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+              <h1>Docker Management</h1>
+              <div class="row">
+                <div class="col">
+                  <div class="d-flex justify-content-center">
+                    <a href="#">
+                      <div class="download android">
+                        <i class="fab fa-google-play fa-3x"></i>
+                        <span class="df">Download from</span>
+                        <span class="dfn">Google Play</span>
+                      </div>
+                    </a>
                   </div>
                 </div>
-                <div class="carousel-item" data-bs-slide-number="1">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (2).webp" class="d-block img-fluid" alt="...">
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-slide-number="2">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (3).webp" class="d-block img-fluid" alt="...">
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-slide-number="3">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (4).webp" class="d-block img-fluid" alt="...">
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-slide-number="4">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (5).webp" class="d-block img-fluid" alt="...">
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-slide-number="5">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (6).webp" class="d-block img-fluid" alt="...">
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-slide-number="6">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (7).webp" class="d-block img-fluid" alt="...">
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-slide-number="7">
-                  <div class="min-vh-20 d-flex justify-content-center">
-                    <img src="images\unnamed (8).webp" class="d-block img-fluid" alt="...">
+                <div class="col">
+                  <div class="d-flex justify-content-center">
+                    <a href="#">
+                      <div class="download apple">
+                        <i class="fab fa-apple fa-3x"></i>
+                        <span class="df">Download from</span>
+                        <span class="dfn">App Store</span>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Carousel Navigation -->
-            <div id="carousel-thumbs" class="carousel slide mt-3" data-bs-ride="carousel">
+          </div>
+          <div class="col-md-4">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="row mx-0">
-                    <div id="carousel-selector-0" class="thumb col-4 px-1 py-2 d-flex justify-content-center selected" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
-                      <img src="images\unnamed (1).webp" class="img-fluid" alt="...">
-                    </div>
-                    <div id="carousel-selector-1" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2">
-                      <img src="images\unnamed (2).webp" class="img-fluid" alt="...">
-                    </div>
-                    <div id="carousel-selector-2" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3">
-                      <img src="images\unnamed (3).webp" class="img-fluid" alt="...">
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row mx-0">
-                    <div id="carousel-selector-3" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4">
-                      <img src="images\unnamed (4).webp" class="img-fluid" alt="...">
-                    </div>
-                    <div id="carousel-selector-4" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5">
-                      <img src="images\unnamed (5).webp" class="img-fluid" alt="...">
-                    </div>
-                    <div id="carousel-selector-5" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6">
-                      <img src="images\unnamed (6).webp" class="img-fluid" alt="...">
+                  <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+                    <div>
+                      <h2>Manage your docker</h2>
+                      <ul>
+                        <li>list containers</li>
+                        <li>create containers</li>
+                        <li>start containers</li>
+                        <li>stop containers</li>
+                        <li>restart containers</li>
+                        <li>remove containers</li>
+                        <li>list images</li>
+                        <li>build images</li>
+                        <li>remove images</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <div class="row mx-0">
-                    <div id="carousel-selector-6" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7">
-                      <img src="images\unnamed (7).webp" class="img-fluid" alt="...">
+                  <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+                    <div>
+                      <h2>Connect via ssh to your Linux server</h2>
+                      <ul>
+                        <li>connect to multiple servers</li>
+                        <li>connect through password or rsa key</li>
+                        <li>view resource usage of containers</li>
+                        <li>view logs of containers</li>
+                      </ul>
                     </div>
-                    <div id="carousel-selector-7" class="thumb col-4 px-1 py-2 d-flex justify-content-center" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8">
-                      <img src="images\unnamed (8).webp" class="img-fluid" alt="...">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+                    <div>
+                      <h2>Privacy in your hand</h2>
+                      <ul>
+                        <li>credentials are encrypted</li>
+                        <li>server info is stored on phone only</li>
+                        <li>data is wiped out once the app is removed</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-thumbs" data-bs-slide="prev">
-                <i class="fas fa-chevron-left fa-4x" aria-hidden="true"></i>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel-thumbs" data-bs-slide="next">
-                <i class="fas fa-chevron-right fa-4x" aria-hidden="true"></i>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <img src="images\Splash Screen.webp" class="img-fluid" alt="">
+        </div>
 
-          </div> <!-- /row -->
-        </div> <!-- /container -->
+
+
       </div>
+    </header>
 
+    <section id="cards-section">
+      <div class="container pb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-5">
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Create images</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Create images.webp" class="card-img-bottom p-5" alt="create images">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Create containers</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Create containers.webp" class="card-img-bottom p-5" alt="create containers">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Ssh authentication</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Ssh authentication.webp" class="card-img-bottom p-5" alt="ssh authentication">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">User authentication</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\User authentication.webp" class="card-img-bottom p-5" alt="user authentication">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Multiple servers</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Multiple servers.webp" class="card-img-bottom p-5" alt="multiple servers">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Images</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Images.webp" class="card-img-bottom p-5" alt="images">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Containers</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Containers.webp" class="card-img-bottom p-5" alt="containers">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header text-center">Logs</h5>
+              <!-- <div class="card-body">
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div> -->
+              <div class="h-100 d-flex justify-content-center align-items-center">
+                <img src="images\Logs.webp" class="card-img-bottom p-5" alt="logs">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="faq-section">
@@ -281,7 +257,6 @@
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/index.js" charset="utf-8"></script>
 </body>
 

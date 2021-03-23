@@ -2,8 +2,9 @@
   TABLE OF CONTENT
 
   1. SPLASH SCREEN
-  2. Gallery
+  2. Cards
   3. F.A.Q
+  4. Media Query
 ******************************************************************************/
 body {
   background-color: #dddddd;
@@ -29,12 +30,7 @@ body {
   background-color: #30475e;
 }
 
-#main-container {
-  height: 100vh;
-}
-
-#main-container::after {
-  content: "";
+header {
   background-image: url("../images/pexels-rodrigo-santos-3888149.jpg");
   background-color: #dddddd;
   background-attachment: fixed;
@@ -42,134 +38,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: screen;
-  /* opacity: 0.4; */
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.navbar {
-  background-image: linear-gradient(180deg, rgba(34, 40, 49, 1) 0%, rgba(34, 40, 49, 0) 100%);
-}
-
-.navbar-dark .navbar-brand {
-  color: #D7DED3;
-}
-
-.navbar-dark .navbar-brand:hover {
-  color: #D7DED3;
+  /* height: 100vh; */
 }
 
 /*****************************************************************************/
 /*************************** 1. SPLASH SCREEN ********************************/
 /*****************************************************************************/
-.slider-container {
-  position: relative;
-  overflow: hidden;
-  width: 50vw;
-  height: 90vh;
-}
-
-.left-slide {
-  height: 100%;
-  width: 65%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s ease-in-out;
-}
-
-.left-slide>div {
-  /* height: 100%;
-  width: 100%; */
-}
-
-/* .left-slide h2 {
-  width: 100%;
-  margin-bottom: 30px;
-  margin-top: -30px;
-  text-align: left;
-} */
-
-.left-slide ul {
-  list-style-type: circle;
-  /* line-height: 1.5;
-  padding-left: 20px; */
-}
-
-.right-slide {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 65%;
-  width: 35%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.right-slide>div {
-  /* height: 100%;
-  width: 100%; */
-  /* display: flex;
-  justify-content: center; */
-}
-
-.right-slide>div>img {
-  border-radius: 20px;
-  /* object-fit: contain; */
-  /* width: auto;
-  height: auto; */
-}
-
-.down-button, .up-button {
-  background-color: #30475e;
-  border: none;
-  color: #dddddd;
-  cursor: pointer;
-  /* font-size: 16px; */
-  padding: 15px;
-  opacity: 0.5
-}
-
-.down-button:hover, .up-button:hover {
-  background-color: #30475e;
-  opacity: 1;
-  transition: opacity 0.75s ease-in-out;
-}
-
-.slider-container .action-buttons button {
-  position: absolute;
-  left: 65%;
-  top: 50%;
-  z-index: 100;
-}
-
-.slider-container .action-buttons .down-button {
-  transform: translateX(-100%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.slider-container .action-buttons .up-button {
-  transform: translateY(-100%);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-/*****************************************************************************/
-/******************************* 2. Gallery **********************************/
-/*****************************************************************************/
-.download-container {
-  max-width: 600px;
-  margin: auto;
-}
-
-#download h2 {
-  text-align: center;
-}
-
 .download {
   background: #30475e;
   border: 1px solid #dddddd;
@@ -207,7 +81,30 @@ body {
   filter: invert(100%);
 }
 
-.gallery-container {
+.carousel-item {
+  height: 307.2px;
+}
+
+.wrapper {
+  padding: 20px;
+  /* box-sizing: border-box;
+  max-width: 100%; */
+}
+
+.wrapper img {
+  /* width: 100%; */
+  /* padding-bottom: 56.25%; */
+  /* background: url("../images/Splash Screen.webp"); */
+  /* background-size: 100% 100%; */
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 10% 90%, transparent 100%);
+  mask-image: linear-gradient(to left, transparent 0%, black 10% 90%, transparent 100%);
+
+}
+
+/*****************************************************************************/
+/******************************* 2. Cards **********************************/
+/*****************************************************************************/
+#cards-section {
   background-image: url("../images/pexels-brett-sayles-3803517.jpg");
   background-color: #dddddd;
   background-attachment: fixed;
@@ -215,61 +112,24 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
+  /* height: 100vh; */
 }
 
-.gallery-container .container {
-  /* max-width: 600px; */
-  height: 100vh;
+.card {
+  background-image: linear-gradient(180deg, #fff 0%, #dddddd 100%);
+  /* border: 1px solid #222831; */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.carousel {
-  position: relative;
+.card-header {
+  background-image: linear-gradient(180deg, #dddddd 0%, #fff 100%);
 }
-
-.carousel-item img {
-  object-fit: cover;
-  max-height: 70vh;
-  border-radius: 20px;
-}
-
-#carousel-thumbs {
-  background-color: #222831;
-  background-color: rgba(34, 40, 49, .3);
-  bottom: 0;
-  left: 0;
-  padding: 0 50px;
-  right: 0;
-  max-width: 600px;
-}
-
-#carousel-thumbs img {
-  border: 5px solid transparent;
-  cursor: pointer;
-  height: 20vh;
-  border-radius: 10px;
-}
-
-#carousel-thumbs img:hover {
-  border-color: #dddddd;
-  border-color: rgba(221, 221, 221, .3);
-}
-
-#carousel-thumbs .selected img {
-  border-color: #dddddd;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 50px;
-}
-
-
 
 /*****************************************************************************/
 /********************************* 3. F.A.Q **********************************/
 /*****************************************************************************/
 #faq-section {
-  height: 100vh;
+  /* height: 100vh; */
   /* background-image: linear-gradient(180deg, #30475e 0%, #222831 100%); */
 }
 
@@ -361,45 +221,13 @@ code {
 }
 
 /*****************************************************************************/
-/**************************** Media Query ************************************/
+/**************************** 4. Media Query *********************************/
 /*****************************************************************************/
-
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .slider-container {
-    width: 95vw;
-  }
-
-  /* .down-button, .up-button {
-    padding: 7px;
-  } */
-
-
-  .carousel-container #carousel-thumbs img {
-    border-width: 3px;
-  }
-
-  /* Secondary slider Arrows */
-  .fa-4x {
-    font-size: 3em;
-  }
-}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  /* Change media query on Java Script */
-  /* .slider-container {
-    height: 80vh;
-  } */
-
-  /* .down-button, .up-button {
-    padding: 7px;
-  } */
-}
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .down-button, .up-button {
-    padding: 7px;
-  }
-}
+@media only screen and (max-width: 768px) {}
