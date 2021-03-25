@@ -23,6 +23,7 @@ body {
   color: #dddddd;
   cursor: pointer;
   padding: 15px;
+  border: 1px solid #dddddd;
   border-radius: 10px;
 }
 
@@ -41,39 +42,44 @@ header {
   /* height: 100vh; */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Recursive', sans-serif;
+}
+
 /*****************************************************************************/
 /*************************** 1. SPLASH SCREEN ********************************/
 /*****************************************************************************/
+
+.display-1 {
+  font-weight: 900;
+}
+
+header a {
+  text-decoration: none;
+}
 .download {
   background: #30475e;
   border: 1px solid #dddddd;
   border-radius: 5px;
   color: #dddddd;
   height: 65px;
-  position: relative;
+  /* position: relative; */
   width: 200px;
 }
 
-.download>.fab {
-  left: 15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.df, .dfn {
-  left: 70px;
-  position: absolute;
-}
-
 .df {
-  font-size: .9rem;
-  top: 13px;
+  font-size: 1rem;
+  /* top: 13px; */
 }
 
 .dfn {
-  font-size: 1.3rem;
-  top: 26px;
+  font-size: 1.5rem;
+  /* top: 26px; */
 }
 
 .download:hover {
@@ -82,23 +88,16 @@ header {
 }
 
 .carousel-item {
-  height: 307.2px;
+  height: 378px;
 }
 
 .wrapper {
   padding: 20px;
-  /* box-sizing: border-box;
-  max-width: 100%; */
 }
 
 .wrapper img {
-  /* width: 100%; */
-  /* padding-bottom: 56.25%; */
-  /* background: url("../images/Splash Screen.webp"); */
-  /* background-size: 100% 100%; */
-  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 10% 90%, transparent 100%);
-  mask-image: linear-gradient(to left, transparent 0%, black 10% 90%, transparent 100%);
-
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 /*****************************************************************************/
@@ -119,23 +118,29 @@ header {
   background-image: linear-gradient(180deg, #fff 0%, #dddddd 100%);
   /* border: 1px solid #222831; */
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
 }
 
-.card-header {
+.card-header:first-child {
   background-image: linear-gradient(180deg, #dddddd 0%, #fff 100%);
+  border-radius: 10px 10px 0 0;
+}
+
+.card img {
+  border-radius: 10px;
 }
 
 /*****************************************************************************/
 /********************************* 3. F.A.Q **********************************/
 /*****************************************************************************/
 #faq-section {
-  /* height: 100vh; */
+  height: 80vh;
   /* background-image: linear-gradient(180deg, #30475e 0%, #222831 100%); */
 }
 
 .faq-container {
-  max-width: 600px;
-  margin: auto;
+  /* max-width: 900px;
+  margin: auto; */
 }
 
 .faq-container h2 {
@@ -177,9 +182,9 @@ header {
   border: 0;
   border-radius: 50%;
   cursor: pointer;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   /* font-size: 1rem; */
   padding: 0;
   position: absolute;
@@ -220,6 +225,13 @@ code {
   /* font-size: 1rem; */
 }
 
+footer {
+  background-color: #222831;
+  color: #dddddd;
+  text-align: center;
+  height: 20vh;
+
+}
 /*****************************************************************************/
 /**************************** 4. Media Query *********************************/
 /*****************************************************************************/
@@ -230,4 +242,36 @@ code {
 @media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+
+  .download {
+    height: 40px;
+    width: 150px;
+  }
+
+  .fab.fa-apple.fa-3x,
+  .fab.fa-google-play.fa-3x {
+    font-size: 2em;
+  }
+
+  .df {
+    font-size: .6rem;
+  }
+
+  .dfn {
+    font-size: 1rem;
+  }
+
+  footer,
+  #faq-section {
+    height: unset;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+}
