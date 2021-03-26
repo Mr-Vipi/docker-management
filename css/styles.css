@@ -4,7 +4,8 @@
   1. SPLASH SCREEN
   2. Cards
   3. F.A.Q
-  4. Media Query
+  4. Footer
+  5. Media Query
 ******************************************************************************/
 body {
   background-color: #dddddd;
@@ -71,16 +72,16 @@ header a {
   border-radius: 5px;
   color: #dddddd;
   line-height: initial;
-  height: 65px;
-  width: 200px;
+  height: 40px;
+  width: 150px;
 }
 
 .df {
-  font-size: 1rem;
+  font-size: .6rem;
 }
 
 .dfn {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .download:hover {
@@ -88,17 +89,22 @@ header a {
   filter: invert(100%);
 }
 
+.carousel-indicators {
+  margin-bottom: 0;
+}
+
 .carousel-inner {
-  height: 325px;
+  height: 210px;
+  margin-top: 30px;
 }
 
 .carousel-inner h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 ul {
   list-style-type: circle;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .wrapper {
@@ -111,7 +117,7 @@ ul {
 }
 
 /*****************************************************************************/
-/******************************* 2. Cards **********************************/
+/********************************* 2. Cards **********************************/
 /*****************************************************************************/
 #cards-section {
   background-image: url("../images/pexels-brett-sayles-3803517.jpg");
@@ -130,11 +136,11 @@ ul {
 }
 
 .card-body h4 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .card-body p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .card img {
@@ -221,7 +227,7 @@ code {
 }
 
 /*****************************************************************************/
-/******************************* Footer **************************************/
+/******************************* 4. Footer ***********************************/
 /*****************************************************************************/
 footer {
   background-color: #222831;
@@ -246,37 +252,110 @@ footer p {
   font-size: 1.25rem;
 }
 
-.contact {
-  text-align: right;
-}
 /*****************************************************************************/
-/**************************** 4. Media Query *********************************/
+/**************************** 5. Media Query *********************************/
 /*****************************************************************************/
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
-  .download {
-    height: 40px;
-    width: 150px;
+@media only screen and (max-width: 600px) {
+  .carousel-inner {
+    height: 230px;
+    margin-top: 30px;
   }
 
-  .fab.fa-apple.fa-3x,
-  .fab.fa-google-play.fa-3x {
-    font-size: 2em;
+  .g-5 {
+    --bs-gutter-x: inherit;
+  }
+
+  .card-body p {
+    font-size: 1.3rem;
+  }
+
+  footer .container {
+    flex-direction: column-reverse;
+    line-height: normal;
+  }
+
+  .contact {
+    padding-top: 10px;
+    padding-bottom: 16px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .carousel-inner {
+    height: 210px;
+  }
+
+  footer .container {
+    flex-direction: column-reverse;
+    line-height: normal;
+  }
+
+  .contact {
+    padding-top: 10px;
+    padding-bottom: 16px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .download {
+    height: 65px;
+    width: 200px;
+  }
+
+  .fab.fa-apple.fa-2x,
+  .fab.fa-google-play.fa-2x {
+    font-size: 3em;
   }
 
   .df {
-    font-size: .6rem;
+    font-size: 1rem;
   }
 
   .dfn {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .carousel-inner {
+    height: 330px;
+    margin-top: unset;
+  }
+
+  footer .container {
+    flex-direction: unset;
+    line-height: inherit;
+  }
+
+  .contact {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel-inner {
+    height: 350px;
+  }
+
+  .carousel-inner h2 {
+    font-size: 2rem;
+  }
+
+  ul {
+    font-size: 1.5rem;
+  }
+
+  .card-body h4 {
+    font-size: 2rem;
+  }
+
+  .card-body p {
+    font-size: 1.5rem;
   }
 
 }
