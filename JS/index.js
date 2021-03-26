@@ -34,10 +34,18 @@ function topFunction() {
 /********************************** F.A.Q ************************************/
 /*****************************************************************************/
 
-const toggles = document.querySelectorAll(".faq-toggle");
+const toggles = document.querySelectorAll(".faq");
 
 toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
-    toggle.parentNode.classList.toggle("active");
+    toggle.classList.toggle("active");
   });
 });
+
+/*****************************************************************************/
+/********************************* Footer ************************************/
+/*****************************************************************************/
+
+var today = new Date();
+var year = today.getFullYear();
+document.getElementById("showDate").innerHTML = year;
